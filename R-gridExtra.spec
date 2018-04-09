@@ -4,18 +4,18 @@
 #
 Name     : R-gridExtra
 Version  : 2.3
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Summary  : Miscellaneous Functions for "Grid" Graphics
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-evaluate
 Requires: R-ggplot2
 Requires: R-gtable
-BuildRequires : R-evaluate
+Requires: R-stringi
 BuildRequires : R-ggplot2
 BuildRequires : R-gtable
+BuildRequires : R-stringi
 BuildRequires : clr-R-helpers
 
 %description
@@ -30,11 +30,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1521166484
+export SOURCE_DATE_EPOCH=1523306854
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1521166484
+export SOURCE_DATE_EPOCH=1523306854
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
