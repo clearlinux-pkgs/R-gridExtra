@@ -4,7 +4,7 @@
 #
 Name     : R-gridExtra
 Version  : 2.3
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Summary  : Miscellaneous Functions for "Grid" Graphics
