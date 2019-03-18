@@ -4,27 +4,19 @@
 #
 Name     : R-gridExtra
 Version  : 2.3
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Summary  : Provides a number of user-level functions to work with "grid" graphics, notably to arrange multiple grid-based plots on a page, and draw tables.
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Rcpp
-Requires: R-ggplot2
-Requires: R-gtable
-Requires: R-labeling
-Requires: R-lazyeval
-Requires: R-munsell
-Requires: R-plyr
-Requires: R-scales
-Requires: R-tibble
-Requires: R-withr
+Requires: R-mime
 BuildRequires : R-Rcpp
 BuildRequires : R-ggplot2
 BuildRequires : R-gtable
 BuildRequires : R-labeling
 BuildRequires : R-lazyeval
+BuildRequires : R-mime
 BuildRequires : R-munsell
 BuildRequires : R-plyr
 BuildRequires : R-scales
@@ -44,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552833130
+export SOURCE_DATE_EPOCH=1552895878
 
 %install
-export SOURCE_DATE_EPOCH=1552833130
+export SOURCE_DATE_EPOCH=1552895878
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
