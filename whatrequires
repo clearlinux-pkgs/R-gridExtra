@@ -1,8 +1,13 @@
 # This file contains recursive sources that require this package
-R-bayesplot
+R-Hmisc
+R-PerformanceAnalytics
+R-dendextend
 R-gbm
+R-ggridges
+R-haplo.stats
+R-pdp
 R-remote
 R-rms
 R-rstan
-R-rstanarm
+R-shinystan
 R-viridis

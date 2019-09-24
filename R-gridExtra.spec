@@ -4,24 +4,16 @@
 #
 Name     : R-gridExtra
 Version  : 2.3
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
-Summary  : Provides a number of user-level functions to work with "grid" graphics, notably to arrange multiple grid-based plots on a page, and draw tables.
+Summary  : Miscellaneous Functions for "Grid" Graphics
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-mime
-BuildRequires : R-Rcpp
+Requires: R-ggplot2
+Requires: R-gtable
 BuildRequires : R-ggplot2
 BuildRequires : R-gtable
-BuildRequires : R-labeling
-BuildRequires : R-lazyeval
-BuildRequires : R-mime
-BuildRequires : R-munsell
-BuildRequires : R-plyr
-BuildRequires : R-scales
-BuildRequires : R-tibble
-BuildRequires : R-withr
 BuildRequires : buildreq-R
 
 %description
@@ -35,13 +27,13 @@ graphics, notably to arrange multiple grid-based plots on a page, and draw
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552895878
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1569359082
 
 %install
-export SOURCE_DATE_EPOCH=1552895878
+export SOURCE_DATE_EPOCH=1569359082
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -70,12 +62,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  gridExtra || :
+R CMD check --no-manual --no-examples --no-codoc gridExtra || :
 
 
 %files
