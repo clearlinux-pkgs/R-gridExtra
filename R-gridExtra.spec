@@ -4,17 +4,17 @@
 #
 Name     : R-gridExtra
 Version  : 2.3
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/gridExtra_2.3.tar.gz
-Summary  : Provides a number of user-level functions to work with "grid" graphics, notably to arrange multiple grid-based plots on a page, and draw tables.
+Summary  : Miscellaneous Functions for "Grid" Graphics
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-ggplot2
 Requires: R-gtable
 BuildRequires : R-ggplot2
 BuildRequires : R-gtable
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 graphics, notably to arrange multiple grid-based plots on a page, and draw
@@ -22,21 +22,22 @@ graphics, notably to arrange multiple grid-based plots on a page, and draw
 
 %prep
 %setup -q -c -n gridExtra
+cd %{_builddir}/gridExtra
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571840454
+export SOURCE_DATE_EPOCH=1589761813
 
 %install
-export SOURCE_DATE_EPOCH=1571840454
+export SOURCE_DATE_EPOCH=1589761813
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
