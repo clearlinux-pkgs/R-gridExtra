@@ -1,8 +1,8 @@
 # This file contains recursive sources that require this package
 R-Hmisc
-R-bayesplot
-R-gbm
-R-haplo.stats
+R-ggfortify
+R-ggrepel
+R-mirt
 R-pdp
 R-remote
 R-rstan
